@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ChatBot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+      <div class="chat-header">ChatBot</div>
+      <div class="chat-box" id="chat-box"></div>
+  
+      <div class="quick-replies">
+        <button onclick="quickReply('Hii Chatbot')">Hii Chatbot</button>
+        <button onclick="quickReply(`What's the current time`)">What's the current time</button>
+        <button onclick="quickReply(`What's today's date`)">What's today's date</button>
+        <button onclick="quickReply('Choose a random number')">Choose a random number</button>
+      </div>
+  
+      <div class="input-area">
+        <input type="text" id="user-input" placeholder="Type a message..." onkeydown="if(event.key==='Enter') sendMessage()" />
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
