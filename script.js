@@ -31,11 +31,18 @@ function appendMessage(sender, message) {
   chatBox.scrollTop = chatBox.scrollHeight;
 }
 
+
+let todaysDay = new Date();
+const dayOfWeek = todaysDay.getDay()
+
+
 function getBotReply(input) {
   const msg = input.toLowerCase();
 
   if (msg.includes('hello') || msg.includes('hi'))
     return 'Hello! How can I help you today?';
+  if (msg.includes('assalamualaikum') || msg.includes('Assalamualaikum'))
+    return 'WalaikumAssalam Habibi! How can I help you ?';
   if (msg.includes('hii chatbot'))
     return 'Hi there! How can I assist you?';
   if (msg.includes('how are you'))
@@ -53,5 +60,17 @@ function getBotReply(input) {
   if (msg.includes('thanks') || msg.includes('thank you'))
     return 'You are welcome.';
 
+
+  if (msg.includes('Day')) {
+    const dayArray = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday" , "Saturday"];
+    const dayName = new Date().getDay();
+    return `Today's day is: ${dayArray[dayName]}`;
+  }
+
+  // if (msg.includes('Day') && msg.includes('day'))
+  //   return `Today's day is: ${dayOfWeek(dayName)}`;
+
+  else{
   return "I'm not sure how to respond to that. Try one of the quick options below.";
+  }
 }
