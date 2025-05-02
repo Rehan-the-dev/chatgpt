@@ -11,15 +11,15 @@
       <div class="chat-box" id="chat-box"></div>
   
       <div class="quick-replies">
-        <button onclick="quickReply('Hii Chatbot')">Hii Chatbot</button>
-        <button onclick="quickReply(`What's the current time`)">What's the current time</button>
-        <button onclick="quickReply(`What's today's date`)">What's today's date</button>
-        <button onclick="quickReply('Choose a random number')">Choose a random number</button>
+        <button onclick="quickReply('Hii Chatbot')" class="quick-replies-button">Hii Chatbot</button>
+        <button onclick="quickReply(`What's the current time`)" class="quick-replies-button">What's the current time</button>
+        <button onclick="quickReply(`What's today's date`)" class="quick-replies-button">What's today's date</button>
+        <button onclick="quickReply('Choose a random number')" class="quick-replies-button">Choose a random number</button>
       </div>
   
       <div class="input-area">
         <input type="text" id="user-input" placeholder="Type a message..." onkeydown="if(event.key==='Enter') sendMessage()" />
-        <button onclick="sendMessage()">Send</button>
+        <button onclick="sendMessage()" id="sendbut">Send</button>
       </div>
     </div>
 

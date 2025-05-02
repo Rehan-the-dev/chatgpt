@@ -61,7 +61,7 @@ function getBotReply(input) {
     return 'You are welcome.';
 
 
-  if (msg.includes('Day')) {
+  if (msg.includes('day') || (msg.includes ('Day'))) {
     const dayArray = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday" , "Saturday"];
     const dayName = new Date().getDay();
     return `Today's day is: ${dayArray[dayName]}`;
@@ -70,7 +70,7 @@ function getBotReply(input) {
   // if (msg.includes('Day') && msg.includes('day'))
   //   return `Today's day is: ${dayOfWeek(dayName)}`;
 
-  else{
+
   return "I'm not sure how to respond to that. Try one of the quick options below.";
-  }
+
 }

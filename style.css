@@ -92,7 +92,7 @@
     border: 1px solid #ccc;
     border-radius: 20px;
     font-size: 1rem;
-    min-width: 0;
+    /* min-width: 0; */
   }
 
   button {
@@ -135,22 +135,32 @@
     background: #c9c9ff;
   }
 
-  @media (max-width: 480px) {
+  @media only screen and (max-width: 580px) {
+
+    .chat-container{
+      width: 100%vw;
+      height: 50%vh;
+    }
+
     .chat-header {
-      font-size: 1rem;
+      font-size: 2.5rem;
       padding: 12px;
     }
 
     .message {
-      font-size: 0.9rem;
+      font-size: 2rem;
     }
 
     #user-input {
-      font-size: 0.95rem;
+      font-size: 1.2rem;
     }
 
-    button {
+    #button {
       width: 100%;
+    }
+
+    #sendbut{
+      font-size: 20px;
     }
 
     .input-area {
@@ -160,5 +170,10 @@
     .quick-replies {
       flex-direction: column;
       align-items: stretch;
+    }
+
+    .quick-replies-button{
+      height: 40px;
+      font-size: 20px;
     }
   }
